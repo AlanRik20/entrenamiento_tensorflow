@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
-    <title>Predicción con TensorFlow.js</title>
-  </head>
-  <body>
-    <div>
-      <h1>TensorFlow.Js Ejemplo</h1>
-      <p>Fórmula a utilizar: y = 2x + 6</p>
-      <button id="btn_entrenar">Entrenar modelo</button>
-      <input type="text" id="texto" placeholder="Escribí un número para X" />
-      <button id="predict">Predecir</button>
-      <p id="estado"></p>
-      <p id="result"></p>
-    </div>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Predicción con TensorFlow.js</title>
+</head>
+<body>
+  <h2>Predicción con TensorFlow.js</h2>
+  <button id="btn_entrenar">Entrenar Modelo</button>
+  
+  <h3>Gráfica de Pérdida durante el Entrenamiento</h3>
+  <canvas id="lossChart" width="500" height="250"></canvas>
+  <p id="info_perdida"></p>
 
-    <script src="index.js"></script>
-  </body>
+  <h3>Predicción</h3>
+  <label for="texto">Ingrese los valores de X (más de un número, separar con comas):</label><br/>
+  <input type="text" id="texto" />
+  <button id="predict">Predecir</button>
+
+  <p id="estado"></p>
+  <div id="result"></div>
+
+  <script src="index.js"></script>
+</body>
 </html>
